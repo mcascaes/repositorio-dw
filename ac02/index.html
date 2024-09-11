@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Feedback para a página de perfil de Matheus cascaes da Costa</h1>
+    <label for="name">nome</label>
+    <input type="text" id="name" name="name" required size="4" maxlength="4">
+
+    <label for="name">gmail</label>
+    <input type="text" id="name" name="name" required size="4" maxlength="4"><br>
+    <form>
+        <label for="opcoes">como encontrou meu perfil?</label>
+        <select name="opcoes" id="opcoes">
+            <option value="google">Google</option>
+            <option value="midia-social">Mídia Social</option>
+            <option value="amigo">amigo</option>
+        </select>
+    </form>
+    <label for="message">Mensagem</label><br>
+    <textarea name="Feedback" id="Feedback" cols="20" rows="5" placeholder="digite aqui seu feedback"></textarea>
+
+    <h4>Você gostou do meu perfil?</h4>
+    <form>
+        <input type="radio" id="sim" name="fav_language" value="sim">
+        <label for="sim">Sim</label><br>
+        <input type="radio" id="nao" name="fav_language" value="nao">
+        <label for="css">Não</label><br>
+        <input type="radio" id="Talvez" name="fav_language" value="Talvez">
+        <label for="javascript">Talvez</label>
+    </form> 
+
+    
+    <h2>O que você gostou no perfil?</h2>
+
+    <form action="/action_page.php">
+        <input type="checkbox" id="gostei1" name="design" value="design">
+        <label for="gostei1">Design</label><br>
+        <input type="checkbox" id="gostei2" name="conteudo" value="conteudo">
+        <label for="gostei2">Conteúdo</label><br>
+        <input type="checkbox" id="gostei3" name="facilidade" value="facilidade">
+        <label for="gostei3">Facilidade de uso</label><br>
+        <input type="checkbox" id="gostei4" name="outros" value="outros">
+        <label for="gostei4">Outros</label><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Redefinir">
+    </form> <br>
+
+
+
+</body>
+</html>
