@@ -1,8 +1,6 @@
-// Mapeamento de tipos e regiões
 const tipoPokemonMap = { fogo: "fire", agua: "water", grama: "grass", eletrico: "electric", normal: "normal", psiquico: "psychic" };
 const regioesParaGeracao = { kanto: 1, johto: 2, hoenn: 3, sinnoh: 4, unova: 5, kalos: 6, alola: 7, galar: 8 };
 
-// Buscar Pokémon por tipo
 document.getElementById('search-type-btn').onclick = async () => {
     const tipo = document.getElementById('pokemon-type').value.toLowerCase();
     const tipoEmIngles = tipoPokemonMap[tipo];
@@ -38,7 +36,6 @@ document.getElementById('search-type-btn').onclick = async () => {
     }
 };
 
-// Buscar Pokémon por região
 document.getElementById('search-region-btn').onclick = async () => {
     const regiao = document.getElementById('pokemon-region').value.toLowerCase();
     const geracao = regioesParaGeracao[regiao];
@@ -74,7 +71,6 @@ document.getElementById('search-region-btn').onclick = async () => {
     }
 };
 
-// Buscar Pokémon por nome
 document.getElementById('pokemon-form').onsubmit = async (e) => {
     e.preventDefault();
     const pokemonName = document.getElementById('pokemon-name').value.toLowerCase();
