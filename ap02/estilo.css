@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffcb05;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 32px;
+    color: #3e721d;
+    margin: 0;
+}
+
+#search-pokemon, #type-gallery, #region-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+input, button, select {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 350px;
+}
+
+button {
+    background-color: #3e721d;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #f8b400;
+}
+
+#pokemon-data {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.pokemon-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+.pokemon-item {
+    width: 120px;
+    height: 180px;
+    perspective: 1000px;
+}
+
+.pokemon-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.pokemon-card-front, .pokemon-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pokemon-card-front {
+    background-color: #fff;
+}
+
+.pokemon-card-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+
+.pokemon-item:hover .pokemon-card {
+    transform: rotateY(180deg);
+}
+
+.pokemon-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pokemon-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        display: block;
+        height: auto;
+    }
+
+    .pokemon-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
