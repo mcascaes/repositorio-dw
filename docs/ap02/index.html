@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Pokémon</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Galeria de Pokémon</h1>
+    </header>
+
+    <main>
+        <section id="search-pokemon">
+            <h2>Buscar Pokémon</h2>
+            <form id="pokemon-form">
+                <input type="text" id="pokemon-name" placeholder="Digite o nome do Pokémon" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <div id="pokemon-data"></div>
+        </section>
+        <section id="type-gallery">
+            <h2>Galeria de Tipos de Pokémon</h2>
+            <label for="pokemon-type">Escolha um tipo:</label>
+            <select id="pokemon-type">
+                <option value="fogo">Fogo</option>
+                <option value="agua">Água</option>
+                <option value="grama">Planta</option>
+                <option value="eletrico">Elétrico</option>
+                <option value="normal">Normal</option>
+                <option value="psiquico">Psíquico</option>
+            </select>
+            <button id="search-type-btn">Buscar Pokémon</button>
+            <div id="pokemon-gallery" class="pokemon-gallery"></div>
+        </section>
+
+        <section id="region-gallery">
+            <h2>Galeria de Pokémon por Região</h2>
+            <label for="pokemon-region">Escolha uma região:</label>
+            <select id="pokemon-region">
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+                <option value="hoenn">Hoenn</option>
+                <option value="sinnoh">Sinnoh</option>
+                <option value="unova">Unova</option>
+                <option value="kalos">Kalos</option>
+                <option value="alola">Alola</option>
+                <option value="galar">Galar</option>
+            </select>
+            <button id="search-region-btn">Buscar Pokémon por Região</button>
+            <div id="pokemon-region-gallery" class="pokemon-gallery"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pokémon Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
